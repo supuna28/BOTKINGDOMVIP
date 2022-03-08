@@ -33,6 +33,6 @@ handler.command = ['add']
 
 handler.group = true
 handler.botAdmin = true
-
+handler.admin = true
 
 export default handler

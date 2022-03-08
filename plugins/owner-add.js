@@ -31,7 +31,6 @@ handler.help = ['add'].map(v => v + ' @user')
 handler.tags = ['group']
 handler.command = ['add']
 
-handler.owner = true
 handler.group = true
 handler.botAdmin = true
 

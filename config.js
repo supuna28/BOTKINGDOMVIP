@@ -2,7 +2,7 @@ import { watchFile, unwatchFile } from 'fs'
 import chalk from 'chalk'
 import { fileURLToPath } from 'url'
 
-global.owner = [['6281227144597', 'ozan', true]] // Put your number here
+global.owner = [['94742134288', 'supuna', true]] // Put your number here
 global.mods = [] // Want some help?
 global.prems = [] // Premium user has unlimited limit
 global.APIs = { // API Prefix
@@ -25,9 +25,9 @@ global.APIKeys = { // APIKey Here
 }
 
 // Sticker WM
-global.packname = 'Antum punya>>>...'
+global.packname = 'BOT KINGDOM>>>...'
 global.author = ''
-global.wm = 'ZaBot-MD'
+global.wm = 'BOTKINGDOM'
 
 global.multiplier = 69 // The higher, The harder levelup
 

@@ -31,10 +31,6 @@ const defaultMenu = {
 │ 🦸🏼‍♂️ Role : *%role*
 │ 🔼 Level : *%level (%exp / %maxexp)*
 │ 💫 Total XP : %totalexp ✨
-│ 
-│ 📅 Tanggal: *%week, %date*
-│ 🕰️ Waktu: *%time*
-│
 │ 📈 Uptime: *%uptime (%muptime)*
 │ 📊 Database: %rtotalreg of %totalreg
 ╰────
@@ -65,7 +61,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
       day: 'numeric',
       month: 'long',
       year: 'numeric',
-      timeZone: 'Asia/Jakarta'
+      timeZone: 'Asia/Colombo'
     })
     let dateIslamic = Intl.DateTimeFormat(locale + '-TN-u-ca-islamic', {
       day: 'numeric',
@@ -146,10 +142,10 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './src/avatar_contact.png')
-    conn.sendHydrated(m.chat, text.trim(), wm, pp, 'https://github.com/BochilGaming/games-wabot', 'Github', null, null, [
-      ['Donate', '/donasi'],
-      ['Speed', '/ping'],
-      ['Owner', '/owner']
+    conn.sendHydrated(m.chat, text.trim(), wm, pp, 'https://chat.whatsapp.com/CIDWlH7yzEsKombRDcTKcV', 'BOTKINGDOM', null, null, [
+      ['Donate 🙂', '/donasi'],
+      ['Speed ♋', '/ping'],
+      ['BOTKINGDOM ♥', '/group']
     ], m, {asLocation: 1})
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)

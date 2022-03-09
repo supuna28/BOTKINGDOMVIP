@@ -1,7 +1,7 @@
 {
-    "name": "zabot-md",
+    "name": "BOTKINGDOM",
     "version": "6.0.0",
-    "description": "Customizable WhatsApp Bot",
+    "description": "Simple WhatsApp Bot",
     "main": "index.js",
     "type": "module",
     "directories": {

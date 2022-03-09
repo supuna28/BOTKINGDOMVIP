@@ -10,8 +10,8 @@ let handler = async (m, { conn, args }) => {
         !global.support.gm) return handler.disabled = true // Disable if doesnt support
     let inputPath = 'src/kertas/magernulis1.jpg'
     let d = new Date()
-    let tgl = d.toLocaleDateString('id-Id', { timeZone: 'Asia/Jakarta' })
-    let hari = d.toLocaleDateString('id-Id', { weekday: 'long', timeZone: 'Asia/Jakarta' })
+    let tgl = d.toLocaleDateString('id-Id', { timeZone: 'Asia/Colombo' })
+    let hari = d.toLocaleDateString('id-Id', { weekday: 'long', timeZone: 'Asia/Colombo' })
     let teks = args.join` `
     // conn.reply(m.chat, util.format({fontPath, inputPath, outputPath, tgl, hari, teks}), m)
     let bufs = []

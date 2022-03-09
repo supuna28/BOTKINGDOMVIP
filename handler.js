@@ -242,13 +242,13 @@ export async function handler(chatUpdate) {
                 if (!('detect' in chat))
                     chat.detect = true
                 if (!('sWelcome' in chat))
-                    chat.sWelcome = ''
+                    chat.sWelcome = 'හෙලෝ @user'
                 if (!('sBye' in chat))
-                    chat.sBye = ''
+                    chat.sBye = '@user සමූහයෙන් ඉවත් විය '
                 if (!('sPromote' in chat))
-                    chat.sPromote = ''
+                    chat.sPromote = '@user අලුත් බොසා 🙂'
                 if (!('sDemote' in chat))
-                    chat.sDemote = ''
+                    chat.sDemote = 'නිලයෙන් පහ කෙරින @user'
                 if (!('delete' in chat))
                     chat.delete = false
                 if (!('antiLink' in chat))
@@ -264,8 +264,8 @@ export async function handler(chatUpdate) {
                     isBanned: false,
                     welcome: true,
                     detect: true,
-                    sWelcome: '',
-                    sBye: '',
+                    sWelcome: 'හෙලෝ @user',
+                    sBye: '@user සමූහයෙන් ඉවත් විය ',
                     sPromote: '',
                     sDemote: '',
                     delete: false,

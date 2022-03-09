@@ -26,7 +26,7 @@ let handler = async (m, { conn, args, isPrems, isOwner }) => {
   if (!isY && !isLimit) conn.sendFile(m.chat, thumbnail, 'thumbnail.jpg', `
 *📌Title:* ${title}
 *🗎 Filesize:* ${audio.fileSizeH}
-*${isLimit ? 'Pakai ' : ''}Link:* ${link}
+*${isLimit ? ' ' : ''}Link:* ${link}
 `.trim(), m)
   if (!isLimit) conn.sendFile(m.chat, source, title + '.mp3', `
 *📌Title:* ${title}

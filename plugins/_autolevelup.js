@@ -9,9 +9,9 @@ export function before(m) {
 
     if (before !== user.level) {
         m.reply(`
-Selamat, anda telah naik level!
+ආයුබෝවන් ඔබගෙ ලෙවල් අප් වී ඇත!
 *${before}* -> *${user.level}*
-gunakan *.profile* untuk mengecek
+සොයාගන්න *.profile* යොදන්න
 	`.trim())
     }
 }

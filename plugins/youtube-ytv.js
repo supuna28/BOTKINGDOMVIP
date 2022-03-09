@@ -26,7 +26,7 @@ let handler = async (m, { conn, args, isPrems, isOwner }) => {
   if (!isY && !isLimit) conn.sendFile(m.chat, thumbnail, 'thumbnail.jpg', `
 *📌Title:* ${title}
 *🗎 Filesize:* ${video.fileSizeH}
-*${isLimit ? 'Pakai ' : ''}Link:* ${link}
+*${isLimit ? ' ' : ''}Link:* ${link}
 `.trim(), m)
   let _thumb = {}
   try { _thumb = { thumbnail: await (await fetch(thumbnail)).buffer() } }

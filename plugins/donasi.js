@@ -1,5 +1,5 @@
 let handler =  m => m.reply(`
-╭─「🙂
+╭─https://chat.whatsapp.com/CIDWlH7yzEsKombRDcTKcV
 ╰────
 `.trim()) // Tambah sendiri kalo mau
 handler.help = ['donasi']

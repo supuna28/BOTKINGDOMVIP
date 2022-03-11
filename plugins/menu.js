@@ -56,7 +56,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     // Offset    0 is  0.00
     // Offset  420 is  7.00
     let weton = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Legi'][Math.floor(d / 84600000) % 5]
-    let week = d.toLocaleDateString(locale, { weekday: 'long', timeZone: 'Asia/Jakarta' })
+    let week = d.toLocaleDateString(locale, { weekday: 'long', timeZone: 'Asia/Colombo' })
     let date = d.toLocaleDateString(locale, {
       day: 'numeric',
       month: 'long',
@@ -72,7 +72,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
       hour: 'numeric',
       minute: 'numeric',
       second: 'numeric',
-      timeZone: 'Asia/Jakarta'
+      timeZone: 'Asia/Colombo'
     })
     let _uptime = process.uptime() * 1000
     let _muptime
@@ -145,7 +145,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     conn.sendHydrated(m.chat, text.trim(), wm, pp, 'https://chat.whatsapp.com/CIDWlH7yzEsKombRDcTKcV', 'BOTKINGDOM', null, null, [
       ['Donate 🙂', '/donasi'],
       ['Speed ♋', '/ping'],
-      ['BOTKINGDOM ♥', '/group']
+      ['BOTKINGDOM ♥', '/donasi']
     ], m, {asLocation: 1})
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)

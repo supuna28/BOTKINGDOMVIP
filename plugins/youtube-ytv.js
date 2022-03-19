@@ -41,7 +41,7 @@ let handler = async (m, { conn, args, isPrems, isOwner }) => {
 }
 handler.help = ['mp4', 'v', ''].map(v => 'yt' + v + ` <url> <without message>`)
 handler.tags = ['downloader']
-handler.command = /^yt(v|mp4)?$/i
+handler.command = /^v(video|ytmp4)?$/i
 
 handler.exp = 0
 

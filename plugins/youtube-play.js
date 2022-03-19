@@ -13,8 +13,8 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 ⌚ *Duration:* ${durationH}
 👁️ *Views:* ${viewH}
   `.trim(), wm, thumbnail, '', '', '', '', [
-    ['Audio', `${usedPrefix}yta ${url} yes`], 
-    ['Video', `${usedPrefix}ytv ${url} yes`]
+    ['Audio', `${usedPrefix}ytmp3 ${url} yes`], 
+    ['Video', `${usedPrefix}ytmp4 ${url} yes`]
   ], m, {asLocation: 1})
 }
 handler.help = ['song', 'play2'].map(v => v + ' <pencarian>')

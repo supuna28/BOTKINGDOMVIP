@@ -37,7 +37,7 @@ let handler = async (m, { conn, args, isPrems, isOwner }) => {
 }
 handler.help = ['mp3', 'a'].map(v => 'yt' + v + ` <url> <without message>`)
 handler.tags = ['downloader']
-handler.command = /^audio(a|ytmp3)$/i
+handler.command = /^(ytmp3|yta)$/i
 
 handler.exp = 0
 

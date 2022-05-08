@@ -1,16 +1,37 @@
-import {mediafiredl} from '@bochilteam/scraper'
-let handler = async (m, {text}) => {
-    let api = await mediafiredl(text)
-    let res = await conn.getFile(api.url)
-    if (Buffer.byteLength(res.data) < 7e+7) {
-        conn.sendFile(m.chat, res.data, api.filename, wm, m)
-    } else {
-        m.reply('File Over 70 MB')
-    }
+import { mediafiredl } from '@bochilteam/scraper'
+
+let handler = async (m, { conn, args, usedPrefix, command }) => {
+
+    if (!args[0]) throw `Use example ${usedPrefix}${command} https://www.mediafire.com/file/941xczxhn27qbby/GBWA_V12.25FF-By.SamMods-.apk/file`
+
+    let res = await mediafiredl(args[0])
+
+    let { url, url2, filename, ext, aploud, filesize, filesizeH } = res
+
+    let caption = `
+
+*❤️නම:* ${filename}
+
+*❤️ප්‍රමානය:* ${filesizeH}
+
+*❤️Extension:* ${ext}
+
+*❤️Uploaded:* ${aploud}
+
+`.trim()
+
+    m.reply(caption)
+
+    await conn.sendFile(m.chat, url, filename, '', m, null, { mimetype: ext, asDocument: true })
+
 }
 
-handler.command = ['mediafire']
+handler.help = ['mediafire'].map(v => v + ' <url>')
+
 handler.tags = ['downloader']
-handler.help = ['mediafire']
+
+handler.command = /^(mediafire|mf)$/i
+
+handler.limit = true
 
 export default handler
